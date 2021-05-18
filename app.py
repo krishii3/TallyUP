@@ -9,7 +9,7 @@ def index():
 
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
-    data= request.data
+    data= request.json
     print(data['array'])
     return {"success":"1"}
 
