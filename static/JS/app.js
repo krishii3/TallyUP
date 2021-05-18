@@ -113,6 +113,7 @@ function Countdown(elem, seconds) {
     that.frame = function(){
         if(that.width <= 0){
             clearInterval(that.timer)
+            disableInput()
         } else {
             --that.width
             timer.style.width = that.width + 'px'
@@ -191,7 +192,15 @@ centerBtn.addEventListener('click',()=>{
 })
 
 
+const endGame = document.querySelector('#end').addEventListener('click',()=>{
+	// console.log("Your game has ended")
+    const GameEndElem = document.createElement('div')
+    const textNode = document.createElement('h3')
+    textNode.textContent = "YOUR GAME HAS ENDED."
+    GameEndElem.className(".gameEnded")
+    GameEndElem.appendChild(textNode)
+    const canvas = document.querySelector('#canvas')
+    canvas.innerHTML = ''
+    canvas.appendChild(GameEndElem)
 
-
-
-
+})

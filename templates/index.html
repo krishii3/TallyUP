@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tally UP</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='./css/style.css')}}">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Tally UP</h1>
         </div>
-        <div class="canvas">
+        <div id="canvas" class="canvas">
             <div id="leftpart" class="leftpart"></div>
             <div id="rightpart" class="rightpart"></div>
         </div>
@@ -38,8 +38,11 @@
             <div class="next">
                 <button class="btn next--btn" id="next">next</button>
             </div>
+            <div class="end">
+                <button class="btn end--btn" id="end">end</button>
+            </div>
         </div>
     </div>
-    <script src="{{ url_for('static',filename='JS/app.js')}}"></script>
+    <script src="{{ url_for('static',filename='./JS/app.js')}}"></script>
 </body>
 </html>
