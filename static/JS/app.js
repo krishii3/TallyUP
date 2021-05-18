@@ -197,7 +197,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     const GameEndElem = document.createElement('div')
     const textNode = document.createElement('h3')
     textNode.textContent = "YOUR GAME HAS ENDED."
-    GameEndElem.className(".gameEnded")
+    GameEndElem.className = "gameEnded"
     GameEndElem.appendChild(textNode)
     const canvas = document.querySelector('#canvas')
     canvas.innerHTML = ''
