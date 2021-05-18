@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
 
 app= Flask(__name__)
 
@@ -9,7 +9,7 @@ def index():
 
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
-    data= request.json
+    data= jsonify(request.data)
     print(data['array'])
     print(data['score'])
     return {"success":"1"}
