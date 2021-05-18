@@ -200,7 +200,11 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     GameEndElem.className = "gameEnded"
     GameEndElem.appendChild(textNode)
     const canvas = document.querySelector('#canvas')
+    const canvas = document.querySelector('#canvas')
     canvas.innerHTML = ''
     canvas.appendChild(GameEndElem)
 
+    // removing controllers
+    document.querySelector('.controller').style.display = 'none'
+    document.querySelector('.user__controller').style.display = 'none'
 })
