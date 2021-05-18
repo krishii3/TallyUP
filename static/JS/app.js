@@ -206,4 +206,18 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     // removing controllers
     document.querySelector('.controller').style.display = 'none'
     document.querySelector('.user__controller').style.display = 'none'
+    
+    const data = JSON.parse(localStorage.getItem("userTime"))
+    fetch('/get_data',{
+        method: "GET",
+        headers: {
+            'Content_type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        localStorage.setItem("userTime",'')
+    })
 })

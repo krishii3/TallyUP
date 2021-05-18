@@ -7,8 +7,7 @@ app= Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/get_data')
-
+@app.route('/get_data', methods=["POST","GET"])
 def getAPI():
     data= request.data
     print(data)
