@@ -209,7 +209,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     
     const data = JSON.parse(localStorage.getItem("userTime"))
     fetch('/get_data',{
-        method: "GET",
+        method: "POST",
         headers: {
             'Content_type': 'application/json'
         },
