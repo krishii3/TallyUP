@@ -9,9 +9,8 @@ def index():
 
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
-    data= jsonify(request.data)
-    print(data['array'])
-    print(data['score'])
+    data= request.data
+    print(data)
     return {"success":"1"}
 
 
