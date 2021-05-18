@@ -10,7 +10,8 @@ def index():
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
     data= request.data
-    print(data)
+    print(data['array'])
+    return {"success":"1"}
 
 
 if __name__ == "__main__":
