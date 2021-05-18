@@ -200,7 +200,6 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     GameEndElem.className = "gameEnded"
     GameEndElem.appendChild(textNode)
     const canvas = document.querySelector('#canvas')
-    const canvas = document.querySelector('#canvas')
     canvas.innerHTML = ''
     canvas.appendChild(GameEndElem)
 
