@@ -11,6 +11,7 @@ def index():
 def getAPI():
     data= request.json
     print(data['array'])
+    print(data['score'])
     return {"success":"1"}
 
 
