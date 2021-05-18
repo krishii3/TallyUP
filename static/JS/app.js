@@ -208,7 +208,8 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     document.querySelector('.user__controller').style.display = 'none'
     
     const data = {
-        array: JSON.parse(localStorage.getItem("userTime"))
+        array: JSON.parse(localStorage.getItem("userTime")),
+        score: counterNum
     }
     fetch('/get_data',{
         method: "POST",
