@@ -203,16 +203,17 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
 
     //Results
     const result = document.createElement("div")
+    const ul = document.createElement("ul")
     result.className = "analysis"
     const heading = document.createElement("h3")
-    heading.textContent = "Your Analysis."
+    heading.textContent = "Your Analysis:"
     result.appendChild(heading)
     const showData = (data) => {
         data.forEach(data => {
-            const p = document.createElement("p")
-            p.textContent = data
-            result.appendChild(p)
-            console.log(data)
+            const li = document.createElement("li")
+            li.textContent = data
+            result.appendChild(li)
+            // console.log(data)
         })
     }
     GameEndElem.appendChild(result)
