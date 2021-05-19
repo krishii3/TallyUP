@@ -216,6 +216,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
             // console.log(data)
         })
     }
+    result.appendChild(ul)
     GameEndElem.appendChild(result)
     const canvas = document.querySelector('#canvas')
     canvas.innerHTML = ''
