@@ -204,7 +204,8 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     //Results
     const result = document.createElement("div")
     result.className = "analysis"
-    result.appendChild(document.createElement("h3").textContent="Your Analysis.")
+    const heading = document.createElement("h3").textContent = "Your Analysis."
+    result.appendChild(heading)
     const showData = (data) => {
         data.forEach(data => {
             const p = document.createElement("p")
