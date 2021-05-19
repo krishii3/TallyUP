@@ -212,7 +212,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
         data.forEach(data => {
             const li = document.createElement("li")
             li.textContent = data
-            result.appendChild(li)
+            ul.appendChild(li)
             // console.log(data)
         })
     }
