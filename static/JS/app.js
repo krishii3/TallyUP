@@ -203,6 +203,17 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     canvas.innerHTML = ''
     canvas.appendChild(GameEndElem)
 
+    //Results
+    const result = document.createElement("div")
+    const showData = (data) => {
+        data.forEach(data => {
+            const p = document.createElement("p")
+            p.textContent = data
+            result.appendChild(p)
+        })
+    }
+    canvas.appendChild(result)
+
     // removing controllers
     document.querySelector('.controller').style.display = 'none'
     document.querySelector('.user__controller').style.display = 'none'
