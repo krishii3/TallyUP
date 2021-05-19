@@ -210,6 +210,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
             const p = document.createElement("p")
             p.textContent = data
             result.appendChild(p)
+            console.log(data)
         })
     }
     canvas.appendChild(result)
@@ -231,7 +232,8 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     })
     .then(res => res.json())
     .then(res => {
-        console.log(res)
+        // console.log(res)
+        showData(res.res)
         localStorage.setItem("userTime",'')
     })
 })
