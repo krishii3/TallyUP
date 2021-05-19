@@ -199,9 +199,7 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
     textNode.textContent = "YOUR GAME HAS ENDED."
     GameEndElem.className = "gameEnded"
     GameEndElem.appendChild(textNode)
-    const canvas = document.querySelector('#canvas')
-    canvas.innerHTML = ''
-    canvas.appendChild(GameEndElem)
+    
 
     //Results
     const result = document.createElement("div")
@@ -213,7 +211,10 @@ const endGame = document.querySelector('#end').addEventListener('click',()=>{
             console.log(data)
         })
     }
-    canvas.appendChild(result)
+    GameEndElem.appendChild(result)
+    const canvas = document.querySelector('#canvas')
+    canvas.innerHTML = ''
+    canvas.appendChild(GameEndElem)
 
     // removing controllers
     document.querySelector('.controller').style.display = 'none'
