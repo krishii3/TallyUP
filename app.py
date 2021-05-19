@@ -43,7 +43,7 @@ def algo(data):
     for a in Final_analysis:
         print(a)
 
-    return
+    return Final_analysis
 
     
 
@@ -59,8 +59,11 @@ def index():
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
     data= json.loads(request.data)
-    algo(data)
-    return {"success":"1"}
+    res = algo(data)
+    return {
+        "success": "1",
+        "res" : res
+    }
 
 
 if __name__ == "__main__":
