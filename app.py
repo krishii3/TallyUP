@@ -28,22 +28,27 @@ def algo(data):
     timings=data['array']
     skip=0
     
-    maths = correct_perc - failed_perc
+    accuracy = correct_perc - failed_perc
     time = 1- (sum(data['array'])/(total_rounds*500))
     ps= correct_perc -skip
     #score_percentile = #data related 
+    unified=(accuracy+time+ps)/3
 
-    total_traits={"maths":maths,"time":time,"Problem Solving":ps}
+    total_traits={"accuracy":accuracy,"time":time,"Problem Solving":ps,"unified":unified}
     print(total_traits)
 
     Final_analysis=[]
     for i,j in (total_traits.items()):
+        if(i=="unified"):
+            continue
         Final_analysis.append(results(j, i))
     
     for a in Final_analysis:
         print(a)
 
-    return Final_analysis
+
+
+    return
 
     
 
@@ -59,11 +64,8 @@ def index():
 @app.route('/get_data', methods=["POST","GET"])
 def getAPI():
     data= json.loads(request.data)
-    res = algo(data)
-    return {
-        "success": "1",
-        "res" : res
-    }
+    algo(data)
+    return {"success":"1"}
 
 
 if __name__ == "__main__":
